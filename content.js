@@ -74,8 +74,7 @@ const PORTFOLIO = {
           summary: "This project began as a mockup based on our existing sim racing equipment, which I then modeled in Fusion 360 using the actual dimensions of the parts. We sourced a real racing seat from a junkyard car, modified it, and integrated it into the frame geometry. I taught myself flux-core welding to fabricate the frame from 13-gauge steel square tubing, chosen for its strength, affordability, and ease of welding; its flat faces also made mounting the electronics simple. For stability, we added eight individual feet, each with a soft carpet face to protect the floor and let the rig slide when moved. I ground down the joints for a clean finish, painted the frame, added the mounting hardware, and put a rubberized texture on the pedal plate to resist wear.",
           specs: [
             ["Frame", "13 ga steel square tube"],
-            ["Joining", "Flux-core welding"],
-            ["Feet", "8, carpet-faced"]
+            ["Joining", "Flux-core welding"]
           ],
           tools: ["Fusion 360", "Flux-core welding", "Metal finishing"],
           link: "",
