@@ -45,14 +45,16 @@ const PORTFOLIO = {
           tools: ["CAD", "Fabrication", "Assembly", "Flight testing"],
           link: "",
           media: [
-            // For video: upload to YouTube (unlisted is fine) and paste the link as youtube: "..."
-            { youtube: "", image: "images/drone-test-flight.jpg", caption: "Initial test flight" },
-            { image: "images/drone-cad.png", caption: "" },
-            { image: "images/IMG_2274.jpg", caption: "" },
-            { image: "images/IMG_2249.jpg", caption: "" },
-            { image: "images/IMG_2275.jpg", caption: "Calibration tests before test flights" },
-            { image: "images/IMG_2255.jpg", caption: "" },
-            { image: "images/IMG_2251.jpg", caption: "Prototype leg mounts" }
+            // For video: upload to YouTube (unlisted is fine) and add a line like:
+            // { youtube: "https://youtu.be/XXXXXXXXXXX", caption: "Initial test flight" },
+            { image: "images/drone-01.jpg", caption: "Measuring carbon fiber tube stock for the arms" },
+            { image: "images/drone-02.jpg", caption: "Cutting the carbon fiber tubes to length" },
+            { image: "images/drone-03.jpg", caption: "Arms cut to length and marked" },
+            { image: "images/drone-04.jpg", caption: "3D printed tube clamps" },
+            { image: "images/drone-05.jpg", caption: "Frame dry fit with arms, center plate, and printed mounts" },
+            { image: "images/drone-06.jpg", caption: "Electronics and motor mount assembly on the center plate" },
+            { image: "images/drone-07.jpg", caption: "Motors mounted on all six arms with the center plate assembled" },
+            { image: "images/drone-08.jpg", caption: "Final assembly with landing legs and battery before test flights" }
           ]
         }
         // Next year's drone goes here: copy the block above, add a comma after it.
@@ -80,11 +82,14 @@ const PORTFOLIO = {
           tools: ["Fusion 360", "Flux-core welding", "Metal finishing"],
           link: "",
           media: [
-            { image: "images/IMG_0304.jpg", caption: "Completed sim cockpit" },
-            { image: "images/IMG_0240.jpg", caption: "" },
-            { image: "images/IMG_0112.jpg", caption: "Welding the frame" },
-            { image: "images/IMG_0224.jpg", caption: "" },
-            { image: "images/IMG_0114.jpg", caption: "Mockup with wheel and monitor mount" }
+            { image: "images/sim-01.jpg", caption: "Completed sim cockpit" },
+            { image: "images/sim-02.jpg", caption: "Mockup with wheel and monitor mount" },
+            { image: "images/sim-03.jpg", caption: "Checking the mockup from the driver's seat" },
+            { image: "images/sim-04.jpg", caption: "Welding the frame" },
+            { image: "images/sim-05.jpg", caption: "Seat, wheel, and pedals fitted to the welded frame" },
+            { image: "images/sim-06.jpg", caption: "Wheel base and monitor arm mounted to the frame" },
+            { image: "images/sim-07.jpg", caption: "Pedal plate with rubberized texture" },
+            { image: "images/sim-08.jpg", caption: "In use" }
           ]
         },
         {
@@ -101,7 +106,12 @@ const PORTFOLIO = {
           tools: ["CAD", "3D printing", "Servo control", "Iterative testing"],
           link: "",
           media: [
-            { image: "images/IMG_9892.jpg", caption: "" }
+            { image: "images/catapult-01.jpg", caption: "Concept sketches from the team brainstorm" },
+            { image: "images/catapult-02.jpg", caption: "Full CAD assembly with servo, rotating base, and launch arm" },
+            { image: "images/catapult-03.jpg", caption: "Side frame and launch arm in CAD" },
+            { image: "images/catapult-04.jpg", caption: "Engineering drawing for the latch base" },
+            { image: "images/catapult-05.jpg", caption: "3D printed prototype" },
+            { image: "images/catapult-06.jpg", caption: "Printed side frame on the rotating base" }
           ]
         },
         {
@@ -117,7 +127,7 @@ const PORTFOLIO = {
           tools: ["MATLAB", "App Designer"],
           link: "",        // paste the GitHub repo link here
           media: [
-            { image: "images/beam-app.png", caption: "" }
+            { image: "images/beam-01.png", caption: "App solving a point load case, with the deflection curve and max deflection" }
           ]
         },
         {
@@ -134,9 +144,10 @@ const PORTFOLIO = {
           tools: ["CAD", "3D printing", "Material selection", "Design iteration"],
           link: "",
           media: [
-            { image: "images/IMG_0294.jpg", caption: "" },
-            { image: "images/IMG_0290.jpg", caption: "" },
-            { image: "images/IMG_0295.jpg", caption: "" }
+            { image: "images/phone-01.jpg", caption: "Final version holding a phone, mounted low beside the vent" },
+            { image: "images/phone-02.jpg", caption: "Adapter installed in the car's factory TomTom GPS socket" },
+            { image: "images/phone-03.jpg", caption: "View from the driver's side" },
+            { image: "images/phone-04.jpg", caption: "Adapter with the clamping phone mount attached" }
           ]
         }
       ]
