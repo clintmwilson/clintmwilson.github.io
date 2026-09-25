@@ -52,7 +52,6 @@ const PORTFOLIO = {
             { image: "images/drone-02.jpg", caption: "Cutting the carbon fiber tubes to length" },
             { image: "images/drone-04.jpg", caption: "3D printed tube clamps" },
             { image: "images/drone-05.jpg", caption: "Frame dry fit with arms, center plate, and printed mounts" },
-            { image: "images/drone-06.jpg", caption: "Electronics and motor mount assembly on the center plate" },
             { image: "images/drone-07.jpg", caption: "Motors mounted on all six arms with the center plate assembled" },
             { image: "images/drone-08.jpg", caption: "Final assembly with landing legs and battery before test flights" }
           ]
