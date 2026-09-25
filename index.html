@@ -103,6 +103,13 @@ figcaption .fig{font:500 11px var(--mono);letter-spacing:.06em;color:var(--ink);
 
 footer{border-top:1px solid var(--line);margin-top:48px;padding-block:28px 40px;font:500 12px var(--mono);color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
+button.btn{cursor:pointer}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:60;
+  transform:translate(-50%,8px);opacity:0;transition:opacity .2s,transform .2s;
+  background:var(--ink);color:var(--paper);font:500 13px var(--mono);padding:10px 16px;border-radius:3px}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+
 /* lightbox */
 .lightbox{position:fixed;inset:0;z-index:50;background:rgba(8,11,10,.92);display:grid;place-items:center;padding:24px;
   padding-top:calc(24px + env(safe-area-inset-top,0px));padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
@@ -131,6 +138,8 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding-block:28px 40px;
   <footer><span id="foot-name"></span><a href="#top">Back to top ↑</a></footer>
 </main>
 
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
 <div class="lightbox" id="lightbox" hidden>
   <button type="button" id="lb-close">Close ✕</button>
   <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
@@ -153,10 +162,32 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding-block:28px 40px;
 
   const c = [];
   if(P.resume) c.push(`<a class="btn primary" href="${esc(P.resume)}" target="_blank" rel="noopener">Résumé (PDF)</a>`);
-  if(P.email) c.push(`<a class="btn" href="mailto:${esc(P.email)}">${esc(P.email)}</a>`);
+  if(P.email) c.push(`<button type="button" class="btn" id="copy-email" title="Click to copy">${esc(P.email)} <span aria-hidden="true">⧉</span></button>`);
   if(P.linkedin) c.push(`<a class="btn" href="${esc(P.linkedin)}" target="_blank" rel="noopener">LinkedIn ↗</a>`);
   if(P.github) c.push(`<a class="btn" href="${esc(P.github)}" target="_blank" rel="noopener">GitHub ↗</a>`);
   $("contacts").innerHTML = c.join("");
+
+  // Click the email button to copy the address, then show a "Copied" popup
+  const toast = $("toast");
+  let toastTimer;
+  function showToast(msg){
+    toast.textContent = msg; toast.hidden = false;
+    requestAnimationFrame(() => toast.classList.add("show"));
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { toast.classList.remove("show"); setTimeout(() => toast.hidden = true, 250); }, 1800);
+  }
+  const eb = $("copy-email");
+  if(eb) eb.addEventListener("click", () => {
+    const fallback = () => {
+      const t = document.createElement("textarea"); t.value = P.email; t.setAttribute("readonly","");
+      t.style.position = "fixed"; t.style.opacity = "0"; document.body.appendChild(t); t.select();
+      let ok = false; try { ok = document.execCommand("copy"); } catch(e){}
+      t.remove(); showToast(ok ? "Email copied" : P.email);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(P.email).then(() => showToast("Email copied"), fallback);
+    } else fallback();
+  });
 
   const yt = url => { const m = String(url).match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/); return m ? m[1] : null; };
 
