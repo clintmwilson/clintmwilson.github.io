@@ -48,9 +48,8 @@ const PORTFOLIO = {
             // For video: upload to YouTube (unlisted is fine) and add a line like:
             // { youtube: "https://youtu.be/XXXXXXXXXXX", caption: "Initial test flight" },
             { youtube: "https://www.youtube.com/watch?v=mW21qmXXzGM", caption: "Initial test flight" },
-            { image: "images/drone-01.jpg", caption: "Measuring carbon fiber tube stock for the arms" },
             { image: "images/drone-02.jpg", caption: "Cutting the carbon fiber tubes to length" },
-            { image: "images/drone-04.jpg", caption: "3D printed tube clamps" },
+            { image: "images/drone-04.jpg", caption: "3D printed tube clamp prototypes" },
             { image: "images/drone-05.jpg", caption: "Frame dry fit with arms, center plate, and printed mounts" },
             { image: "images/drone-07.jpg", caption: "Motors mounted on all six arms with the center plate assembled" },
             { image: "images/drone-08.jpg", caption: "Final assembly with landing legs and battery before test flights" }
@@ -106,11 +105,11 @@ const PORTFOLIO = {
           link: "",
           media: [
             { image: "images/catapult-01.jpg", caption: "Concept sketches from the team brainstorm" },
-            { image: "images/catapult-02.jpg", caption: "Full CAD assembly with servo, rotating base, and launch arm" },
+            { image: "images/catapult-02.jpg", caption: "CAD assembly with servo, rotating base, and launch arm" },
             { image: "images/catapult-03.jpg", caption: "Side frame and launch arm in CAD" },
             { image: "images/catapult-04.jpg", caption: "Engineering drawing for the latch base" },
             { image: "images/catapult-05.jpg", caption: "3D printed prototype" },
-            { image: "images/catapult-06.jpg", caption: "Printed side frame on the rotating base" }
+            { image: "images/catapult-06.jpg", caption: "Completed frame after painting" }
           ]
         },
         {
