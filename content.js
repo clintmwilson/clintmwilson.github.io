@@ -19,8 +19,8 @@ const PORTFOLIO = {
   bio: "I design and build physical things: drone components for a student flight team, a welded steel sim racing rig, and 3D printed parts that have to survive real use. I like projects that go from CAD to a working part I can test.",
 
   // Contact links. Leave "" to hide.
-  email: "",
-  linkedin: "",
+  email: "clintwilsonm@gmail.com",
+  linkedin: "www.linkedin.com/in/clint-m-wilson",
   github: "https://github.com/clintmwilson",
   resume: "",              // e.g. "files/Clint-Wilson-Resume.pdf"
 
