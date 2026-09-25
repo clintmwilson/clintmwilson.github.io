@@ -50,7 +50,6 @@ const PORTFOLIO = {
             { youtube: "https://www.youtube.com/watch?v=mW21qmXXzGM", caption: "Initial test flight" },
             { image: "images/drone-01.jpg", caption: "Measuring carbon fiber tube stock for the arms" },
             { image: "images/drone-02.jpg", caption: "Cutting the carbon fiber tubes to length" },
-            { image: "images/drone-03.jpg", caption: "Arms cut to length and marked" },
             { image: "images/drone-04.jpg", caption: "3D printed tube clamps" },
             { image: "images/drone-05.jpg", caption: "Frame dry fit with arms, center plate, and printed mounts" },
             { image: "images/drone-06.jpg", caption: "Electronics and motor mount assembly on the center plate" },
