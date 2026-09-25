@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clint Wilson Portfolio</title>
+<meta name="description" content="Engineering portfolio of Clint Wilson, UC San Diego.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F2F4F3; --panel:#FFFFFF; --ink:#141B1A; --muted:#56635F;
+  --line:#CDD5D2; --faint:#E4E9E7; --accent:#1F4FD1; --accent-soft:#E3EAFB;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1413; --panel:#161D1C; --ink:#E5ECEA; --muted:#93A29E;
+    --line:#2C3634; --faint:#1E2725; --accent:#86A6FF; --accent-soft:#1B2542;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1413; --panel:#161D1C; --ink:#E5ECEA; --muted:#93A29E;
+  --line:#2C3634; --faint:#1E2725; --accent:#86A6FF; --accent-soft:#1B2542;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--body);
+  padding-inline:20px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1080px;margin:0 auto}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--paper);
+  border-bottom:1px solid var(--line);margin-inline:-20px;padding:12px 20px}
+.top .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.mark{font:700 15px/1 var(--display);font-stretch:85%;letter-spacing:.02em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.top nav{display:flex;gap:18px;flex-wrap:wrap}
+.top nav a{font:500 13px var(--mono);color:var(--muted);text-decoration:none}
+.top nav a:hover{color:var(--ink)}
+
+.hero{padding-block:72px 56px;display:grid;gap:20px;border-bottom:1px solid var(--line)}
+.hero .eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.hero h1{margin:0;font:800 clamp(48px,11vw,112px)/.9 var(--display);font-stretch:72%;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance}
+.hero .headline{font:600 clamp(18px,2.4vw,22px)/1.35 var(--body);margin:0;max-width:40ch}
+.hero .bio{margin:0;max-width:62ch;color:var(--muted)}
+.contacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);
+  background:var(--panel);color:var(--ink);text-decoration:none;font:500 13px var(--mono);border-radius:3px}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* sections */
+.section{padding-block:64px 24px}
+.section-head{display:grid;gap:10px;margin-bottom:36px;max-width:70ch}
+.kind{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.section-head h2{margin:0;font:800 clamp(30px,5vw,48px)/1 var(--display);font-stretch:78%;text-transform:uppercase;text-wrap:balance}
+.section-head p{margin:0;color:var(--muted)}
+.section.club{border:1px solid var(--line);background:var(--panel);margin-top:56px;padding:36px clamp(16px,4vw,40px) 12px}
+.section.club .project{border-color:var(--faint)}
+
+/* project */
+.project{border-top:1px solid var(--line);padding-block:36px 44px;display:grid;gap:28px}
+.project-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:start}
+@media (max-width:760px){.project-grid{grid-template-columns:1fr;gap:24px}}
+.project h3{margin:0 0 14px;font:700 clamp(24px,3.4vw,32px)/1.1 var(--display);font-stretch:88%;text-wrap:balance}
+.project .summary{margin:0;max-width:65ch}
+.project .more{margin-top:16px;display:inline-block;font:500 13px var(--mono)}
+
+/* drawing title block */
+.titleblock{border:1.5px solid var(--ink);font-size:13px;background:var(--panel)}
+.titleblock .row{display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--line)}
+.titleblock .row:first-child{border-top:0}
+.titleblock dt{padding:8px 10px;font:500 10.5px/1.5 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);border-right:1px solid var(--line)}
+.titleblock dd{margin:0;padding:8px 10px;font-variant-numeric:tabular-nums}
+.titleblock dl{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:10px;border-top:1.5px solid var(--ink)}
+.chip{font:500 11.5px var(--mono);padding:3px 8px;background:var(--accent-soft);color:var(--ink);border-radius:2px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
+figure{margin:0;display:grid;gap:8px;align-content:start}
+.frame{position:relative;aspect-ratio:4/3;background:var(--faint);border:1px solid var(--line);overflow:hidden;cursor:zoom-in;padding:0;width:100%}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.frame:hover img{transform:scale(1.03)}
+@media (prefers-reduced-motion:reduce){.frame img{transition:none}}
+.frame .play{position:absolute;inset:auto auto 10px 10px;background:var(--ink);color:var(--paper);font:500 12px var(--mono);padding:5px 9px}
+.placeholder{position:absolute;inset:0;display:grid;place-content:center;gap:6px;text-align:center;padding:12px;
+  background:repeating-linear-gradient(135deg,var(--faint) 0 10px,transparent 10px 20px);color:var(--muted);font:500 11.5px/1.4 var(--mono)}
+.placeholder b{color:var(--ink);font-weight:500}
+figcaption{font-size:13.5px;line-height:1.45;color:var(--muted)}
+figcaption .fig{font:500 11px var(--mono);letter-spacing:.06em;color:var(--ink);margin-right:6px;text-transform:uppercase}
+
+footer{border-top:1px solid var(--line);margin-top:48px;padding-block:28px 40px;font:500 12px var(--mono);color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(8,11,10,.92);display:grid;place-items:center;padding:24px;
+  padding-top:calc(24px + env(safe-area-inset-top,0px));padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+.lightbox figure{max-width:min(1100px,100%);gap:12px}
+.lightbox img{max-height:80vh;width:auto;margin:0 auto;object-fit:contain}
+.lightbox figcaption{color:#D5DCDA;text-align:center}
+.lightbox button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:16px;background:none;border:1px solid #6d7775;color:#fff;font:500 13px var(--mono);padding:7px 12px;cursor:pointer}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="mark" href="#top" id="mark"></a>
+  <nav id="nav" aria-label="Sections"></nav>
+</div></header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <div class="eyebrow">Engineering portfolio</div>
+    <h1 id="name"></h1>
+    <p class="headline" id="headline"></p>
+    <p class="bio" id="bio"></p>
+    <div class="contacts" id="contacts"></div>
+  </section>
+  <div id="sections"></div>
+  <footer><span id="foot-name"></span><a href="#top">Back to top ↑</a></footer>
+</main>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" id="lb-close">Close ✕</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+</div>
+
+<script src="content.js"></script>
+<script>
+(function(){
+  const P = window.PORTFOLIO || (typeof PORTFOLIO !== "undefined" ? PORTFOLIO : null);
+  if(!P){document.body.insertAdjacentHTML("afterbegin","<p style='padding:20px'>content.js has a typo (often a missing comma or quote). Check the last change you made.</p>");return;}
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const $ = id => document.getElementById(id);
+
+  document.title = P.name + " Portfolio";
+  $("mark").textContent = P.name;
+  $("name").textContent = P.name;
+  $("headline").textContent = P.headline || "";
+  $("bio").textContent = P.bio || "";
+  $("foot-name").textContent = "© " + new Date().getFullYear() + " " + P.name;
+
+  const c = [];
+  if(P.resume) c.push(`<a class="btn primary" href="${esc(P.resume)}" target="_blank" rel="noopener">Résumé (PDF)</a>`);
+  if(P.email) c.push(`<a class="btn" href="mailto:${esc(P.email)}">${esc(P.email)}</a>`);
+  if(P.linkedin) c.push(`<a class="btn" href="${esc(P.linkedin)}" target="_blank" rel="noopener">LinkedIn ↗</a>`);
+  if(P.github) c.push(`<a class="btn" href="${esc(P.github)}" target="_blank" rel="noopener">GitHub ↗</a>`);
+  $("contacts").innerHTML = c.join("");
+
+  const yt = url => { const m = String(url).match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/); return m ? m[1] : null; };
+
+  function mediaHTML(m, i){
+    const n = `<span class="fig">Fig. ${i+1}</span>`;
+    const cap = m.caption ? `<figcaption>${n}${esc(m.caption)}</figcaption>` : `<figcaption>${n}</figcaption>`;
+    const id = m.youtube ? yt(m.youtube) : null;
+    if(id){
+      return `<figure><a class="frame" href="${esc(m.youtube)}" target="_blank" rel="noopener" aria-label="Watch video: ${esc(m.caption)}">
+        <img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="${esc(m.caption)}" loading="lazy">
+        <span class="play">▶ Watch video</span></a>${cap}</figure>`;
+    }
+    return `<figure><button type="button" class="frame" data-src="${esc(m.image)}" data-cap="${esc(m.caption)}" aria-label="Enlarge photo${m.caption? ": "+esc(m.caption):""}">
+      <img src="${esc(m.image)}" alt="${esc(m.caption)}" loading="lazy" onerror="this.outerHTML='<span class=&quot;placeholder&quot;><span>Photo goes here</span><b>'+this.getAttribute('src')+'</b></span>';this.parentNode&&this.parentNode.removeAttribute('data-src')">
+      </button>${cap}</figure>`;
+  }
+
+  function projectHTML(p){
+    const rows = [["Type",p.type],["Role",p.role],["Year",p.year], ...(p.specs||[])]
+      .filter(r => r[1]).map(r => `<div class="row"><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`).join("");
+    const chips = (p.tools||[]).length ? `<div class="chips">${p.tools.map(t=>`<span class="chip">${esc(t)}</span>`).join("")}</div>` : "";
+    const link = p.link ? `<a class="more" href="${esc(p.link)}" target="_blank" rel="noopener">View project files ↗</a>` : "";
+    const media = (p.media||[]).length ? `<div class="gallery">${p.media.map(mediaHTML).join("")}</div>` : "";
+    return `<article class="project">
+      <div class="project-grid">
+        <div><h3>${esc(p.title)}</h3><p class="summary">${esc(p.summary)}</p>${link}</div>
+        <div class="titleblock"><dl>${rows}</dl>${chips}</div>
+      </div>${media}</article>`;
+  }
+
+  $("nav").innerHTML = P.sections.map(s => `<a href="#${esc(s.id)}">${esc(s.navLabel || (s.id==="projects"?"Projects":s.title.split(" @")[0].replace("Design Build ","")))}</a>`).join("");
+  $("sections").innerHTML = P.sections.map(s => `
+    <section class="section ${s.kind && /club|team/i.test(s.kind) ? "club" : ""}" id="${esc(s.id)}">
+      <div class="section-head">
+        ${s.kind ? `<div class="kind">${esc(s.kind)}</div>` : ""}
+        <h2>${esc(s.title)}</h2>
+        ${s.about ? `<p>${esc(s.about)}</p>` : ""}
+      </div>
+      ${(s.projects||[]).map(projectHTML).join("")}
+    </section>`).join("");
+
+  const lb = $("lightbox"), lbImg = $("lb-img"), lbCap = $("lb-cap");
+  document.addEventListener("click", e => {
+    const f = e.target.closest("button.frame[data-src]");
+    if(f){ lbImg.src = f.dataset.src; lbImg.alt = f.dataset.cap || ""; lbCap.textContent = f.dataset.cap || ""; lb.hidden = false; $("lb-close").focus(); }
+    else if(e.target === lb || e.target.id === "lb-close"){ lb.hidden = true; }
+  });
+  document.addEventListener("keydown", e => { if(e.key === "Escape") lb.hidden = true; });
+})();
+</script>
+</body>
+</html>
