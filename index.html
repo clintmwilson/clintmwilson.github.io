@@ -209,7 +209,7 @@ button.btn{cursor:pointer}
     const rows = [["Type",p.type],["Role",p.role],["Year",p.year], ...(p.specs||[])]
       .filter(r => r[1]).map(r => `<div class="row"><dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd></div>`).join("");
     const chips = (p.tools||[]).length ? `<div class="chips">${p.tools.map(t=>`<span class="chip">${esc(t)}</span>`).join("")}</div>` : "";
-    const link = p.link ? `<a class="more" href="${esc(p.link)}" target="_blank" rel="noopener">View project files ↗</a>` : "";
+    const link = p.link ? `<a class="more" href="${esc(p.link)}" target="_blank" rel="noopener">${/github\.com/i.test(p.link) ? "View code on GitHub" : "View project files"} ↗</a>` : "";
     const media = (p.media||[]).length ? `<div class="gallery">${p.media.map(mediaHTML).join("")}</div>` : "";
     return `<article class="project">
       <div class="project-grid">

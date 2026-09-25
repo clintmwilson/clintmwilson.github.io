@@ -47,6 +47,7 @@ const PORTFOLIO = {
           media: [
             // For video: upload to YouTube (unlisted is fine) and add a line like:
             // { youtube: "https://youtu.be/XXXXXXXXXXX", caption: "Initial test flight" },
+            { youtube: "https://www.youtube.com/watch?v=mW21qmXXzGM", caption: "Initial test flight" },
             { image: "images/drone-01.jpg", caption: "Measuring carbon fiber tube stock for the arms" },
             { image: "images/drone-02.jpg", caption: "Cutting the carbon fiber tubes to length" },
             { image: "images/drone-03.jpg", caption: "Arms cut to length and marked" },
@@ -125,7 +126,7 @@ const PORTFOLIO = {
             ["Outputs", "Deflection curve, max deflection"]
           ],
           tools: ["MATLAB", "App Designer"],
-          link: "",        // paste the GitHub repo link here
+          link: "https://github.com/clintmwilson/matlab-deflection-app",        // paste the GitHub repo link here
           media: [
             { image: "images/beam-01.png", caption: "App solving a point load case, with the deflection curve and max deflection" }
           ]
