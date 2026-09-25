@@ -86,7 +86,7 @@ const PORTFOLIO = {
             { image: "images/sim-02.jpg", caption: "Mockup with wheel and monitor mount" },
             { image: "images/sim-03.jpg", caption: "Checking the mockup from the driver's seat" },
             { image: "images/sim-04.jpg", caption: "Welding the frame" },
-            { image: "images/sim-05.jpg", caption: "Seat, wheel, and pedals fitted to the welded frame" },
+            { image: "images/sim-05.jpg", caption: "Seat, wheel, and pedals test fitting with the welded frame" },
             { image: "images/sim-06.jpg", caption: "Wheel base and monitor arm mounted to the frame" },
             { image: "images/sim-07.jpg", caption: "Pedal plate with rubberized texture" },
             { image: "images/sim-08.jpg", caption: "In use" }
@@ -146,7 +146,7 @@ const PORTFOLIO = {
           media: [
             { image: "images/phone-01.jpg", caption: "Final version holding a phone, mounted low beside the vent" },
             { image: "images/phone-02.jpg", caption: "Adapter installed in the car's factory TomTom GPS socket" },
-            { image: "images/phone-03.jpg", caption: "View from the driver's side" },
+            { image: "images/phone-03.jpg", caption: "View from the passenger's side" },
             { image: "images/phone-04.jpg", caption: "Adapter with the clamping phone mount attached" }
           ]
         }
