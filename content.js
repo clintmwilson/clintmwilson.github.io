@@ -20,7 +20,7 @@ const PORTFOLIO = {
 
   // Contact links. Leave "" to hide.
   email: "clintwilsonm@gmail.com",
-  linkedin: "www.linkedin.com/in/clint-m-wilson",
+  linkedin: "https://www.linkedin.com/in/clint-m-wilson",
   github: "https://github.com/clintmwilson",
   resume: "",              // e.g. "files/Clint-Wilson-Resume.pdf"
 
